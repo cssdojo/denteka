@@ -1,5 +1,8 @@
 head.ready(function() {
 
-	console.log("These aren't the droids you're looking for!");
+	$(' .subnav .has-dropdown ').on('click', function() {
+		$(this).toggleClass('is-active');
+		return false;
+	});
 
 });
