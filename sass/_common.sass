@@ -1,0 +1,108 @@
+body
+	font-family: Arial, sans-serif
+	font-size: 14px
+	line-height: 1.4
+	min-width: 960px
+
+%in
+	width: 940px
+	margin-left: auto
+	margin-right: auto
+
+.icon
+	display: inline-block
+	vertical-align: middle
+	&.icon_phone
+		+s(phone)
+	&.icon_mail
+		+s(mail)
+	&.icon_mts
+		+s(mts)
+	&.icon_megafon
+		+s(megafon)
+	&.icon_beeline
+		+s(beeline)
+
+.out
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -156px
+
+.header
+	background: #f3f7f4
+	height: 116px
+	color: #004c01
+	.header__in
+		@extend %in
+		+clr
+		padding: 20px 0
+	.header__logo
+		float: left
+		margin-top: -4px
+		margin-right: 80px
+		a
+			display: block
+			+s(logo)
+			+hidetext
+
+
+.contacts
+	float: left
+	+clr
+	.icon
+		position: relative
+		top: -2px
+		margin-right: 5px
+		&.icon_mail
+			top: -1px
+	ul
+		float: left
+		margin-left: 15px
+		&:first-child
+			margin-left: 0
+	li
+		font-size: 16px
+	a
+		display: block
+		color: #0a52a2
+		text-decoration: none
+		// &:hover
+		// 	text-decoration: underline
+		&.contacts__callback
+			font-size: 12px
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+
+.basket
+	background: url("../img/basket.png") 8px 50% no-repeat
+	float: right
+	width: 220px
+	border: 2px solid #42885c
+	font-size: 12px
+	line-height: 16px
+	padding: 10px 10px 10px 60px
+
+
+.page
+	@extend %in
+
+.push, .footer
+	height: 156px
+.footer
+	background: #f3f7f4
+	height: 156px
+	.footer__in
+		@extend %in
+		+clr
+		padding: 33px 0 10px
+	.footer__contacts
+		float: left
+		margin-left: 240px
+	.footer__info
+		float: left
+		font-size: 14px
+		color: #4f575c
+		line-height: 22px
+		margin-left: 20px
