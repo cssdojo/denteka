@@ -159,7 +159,7 @@ body
 
 .page
 	@extend %in
-	// padding-bottom: 40px
+	padding-bottom: 40px
 	// overflow: hidden
 
 .site_push, .footer
@@ -457,6 +457,42 @@ body
 		font-size: 14px
 		line-height: 1
 		margin-top: 15px
+		a
+			color: #0071bc
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+
+.entries
+	.entries__list
+		+clr
+		margin-left: -20px
+	.entries__item
+		float: left
+		width: 340px
+		height: 223px
+		overflow: hidden
+		margin-left: 20px
+		+border-radius(5px)
+		background: #f0f0f5
+		line-height: 22px
+		padding: 15px 20px
+		margin-bottom: 15px
+		p
+			color: #4f575c
+			font-size: 14px
+	.entries__title
+		font-size: 24px
+		color: #0071bc
+		a
+			color: inherit
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.entries__more
+		font-size: 14px
+		line-height: 1
+		// margin-top: 12px
 		a
 			color: #0071bc
 			text-decoration: underline
