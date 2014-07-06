@@ -2,6 +2,7 @@ body
 	font-family: Arial, sans-serif
 	font-size: 14px
 	line-height: 1.4
+	+font-smoothing
 	min-width: 960px
 
 %in
@@ -46,7 +47,6 @@ body
 			+s(logo)
 			+hidetext
 
-
 .contacts
 	float: left
 	+clr
@@ -83,6 +83,38 @@ body
 	font-size: 12px
 	line-height: 16px
 	padding: 10px 10px 10px 60px
+
+.nav
+	@extend %in
+	margin-top: -21px
+	margin-bottom: 20px
+	> ul
+		padding: 0 20px
+		+border-radius(5px)
+		background-color: #427255
+		+background-image(linear-gradient(bottom, rgba(124,183,147,0) 0%, rgba(124,183,147,.5) 100%))
+		+box-shadow(0 4px 0 #2c553c)
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-left: 25px
+			&:first-child
+				margin-left: 0
+			&:hover
+				a
+					color: #ffa200
+					text-decoration: underline
+			&.is-active
+				a
+					color: #b9e5ad
+					text-decoration: none
+		a
+			display: block
+			font-size: 16px
+			color: #fff
+			text-decoration: none
+			line-height: 16px
+			padding: 12px 0
 
 
 .page
