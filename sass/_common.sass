@@ -67,6 +67,13 @@ body
 	&.icon_beeline
 		+s(beeline)
 
+a
+	color: #0071bc
+	text-decoration: underline
+	&:hover
+		color: #f6a007
+		text-decoration: none
+
 .btn
 	+lbold
 	white-space: nowrap
@@ -86,6 +93,7 @@ body
 	padding: 6px
 	+transition(all .2s linear)
 	&:hover
+		color: #fff
 		background-color: #59a577
 		+background-image(linear-gradient(bottom, rgba(124,183,147,0) 0%, rgba(124,183,147,.5) 100%))
 	&:active
@@ -111,6 +119,14 @@ body
 		+background-image(linear-gradient(bottom, rgba(0,114,182,.8) -25%, rgba(255,255,255,.8) 125%))
 		padding: 4px 10px
 		+box-shadow(0 2px 0 #004b80)
+		+transition(all .2s linear)
+		&:hover
+			background-color: #2b8abf
+			+background-image(linear-gradient(bottom, rgba(48,173,248,.8) -25%, rgba(255,255,255,.8) 125%))
+		&:active
+			background-color: #2b8abf
+			+box-shadow(inset 0 1px 1px rgba(0,75,128,.75))
+			+background-image(linear-gradient(bottom, rgba(48,173,248,.8) -25%, rgba(255,255,255,.8) 125%))
 
 .out
 	min-height: 100%
@@ -156,7 +172,7 @@ body
 		font-size: 16px
 	a
 		display: block
-		color: #0a52a2
+		// color: #0a52a2
 		text-decoration: none
 		padding-left: 21px
 		// &:hover
@@ -396,12 +412,12 @@ body
 	.search__ordertrigger
 		+lbold
 		font-size: 12px
-		color: #0071bc
-		text-decoration: underline
+		// color: #0071bc
+		// text-decoration: underline
 		display: block
 		text-align: right
-		&:hover
-			text-decoration: none
+		// &:hover
+			// text-decoration: none
 	.search__form
 		padding-top: 20px
 		padding-bottom: 15px
@@ -549,11 +565,11 @@ body
 		font-size: 14px
 		margin-top: 8px
 		line-height: 1
-		a
-			color: #0071bc
-			text-decoration: underline
-			&:hover
-				text-decoration: none
+		// a
+			// color: #0071bc
+			// text-decoration: underline
+			// &:hover
+				// text-decoration: none
 
 .brands
 	margin-bottom: 40px
@@ -574,11 +590,15 @@ body
 		font-size: 14px
 		line-height: 1
 		margin-top: 15px
-		a
-			color: #0071bc
-			text-decoration: underline
-			&:hover
-				text-decoration: none
+		// a
+		// 	color: #0071bc
+		// 	text-decoration: underline
+		// 	&:hover
+		// 		text-decoration: none		// a
+		// 	color: #0071bc
+		// 	text-decoration: underline
+		// 	&:hover
+		// 		text-decoration: none
 
 .entries
 	.entries__list
@@ -614,11 +634,11 @@ body
 		font-size: 14px
 		line-height: 1
 		// margin-top: 12px
-		a
-			color: #0071bc
-			text-decoration: underline
-			&:hover
-				text-decoration: none
+		// a
+		// 	color: #0071bc
+		// 	text-decoration: underline
+		// 	&:hover
+		// 		text-decoration: none
 
 .partneradv
 	+clr
@@ -669,8 +689,152 @@ body
 			&:first-child
 				margin-right: 10px
 
+.breadcrumbs
+	margin-bottom: 30px
+	font-size: 0
+	li
+		position: relative
+		display: inline-block
+		+lbold
+		color: #4f575c
+		font-size: 12px
+		padding-left: 15px
+		&:before
+			position: absolute
+			top: 50%
+			margin-top: -3px
+			left: 6px
+			+s(bc_arr)
+			content: ""
+		&:first-child
+			padding-left: 0
+			&:before
+				content: none
 
+.topic
+	font-size: 14px
+	line-height: 22px
+	h1, h2, h3, h4
+		+lblack
+		color: #42845a
+		text-transform: uppercase
+		margin-bottom: 20px
+		letter-spacing: 0.04em
+	h1
+		font-size: 30px
+		line-height: 35px
+	h2
+		font-size: 26px
+		line-height: 30px
+	h3
+		font-size: 22px
+		line-height: 25px
+	h4
+		font-size: 18px
+		line-height: 24px
+	p
+		color: #4f575c
+		margin-bottom: 15px
+	p, ul, ol
+		+ h2
+			margin-top: 40px
+	p, ul, ol
+		+ h3
+			margin-top: 40px
+	p, ul, ol
+		+ h4
+			margin-top: 40px
+	.topic__img
+		float: left
+		margin: 5px 25px 20px 0
+	ol
+		// margin-left: 12px
+		padding-left: 35px
+		list-style-type: decimal
+		margin-bottom: 10px
+		li
+			font-size: 14px
+			color: #535a63
+			// margin-bottom: 15px
+	ul
+		margin-bottom: 10px
+		li
+			position: relative
+			color: #535a63
+			margin-bottom: 5px
+			&:before
+				position: absolute
+				top: 9px
+				// left: 0
+				content: ""
+		> li
+			padding-left: 27px
+			&:before
+				left: 16px
+				+s(mark1)
+			ul
+				margin-top: 5px
+				> li
+					padding-left: 20px
+					&:before
+						+s(mark2)
+						left: 9px
+					ul
+						margin-top: 5px
+						> li
+							padding-left: 30px
+							&:before
+								+s(mark3)
+								left: 19px
+	blockquote
+		+lblackitalic
+		font-size: 18px
+		color: #0071bc
+		background: #f0f0f5
+		text-align: center
+		+border-radius(5px)
+		padding: 20px 25px
+		margin: 25px 0
 
+	.table
+		padding-bottom: 36px
+		margin-top: 25px
+		margin-bottom: 25px
+		position: relative
+		&:before
+			position: absolute
+			height: 36px
+			// bottom: -36px
+			bottom: 0
+			left: 0
+			right: 0
+			content: ""
+			background: #437857
+			+border-radius(0 0 5px 5px)
+		table
+			// table-layout: fixed
+			text-align: center
+			thead
+				td
+					text-transform: uppercase
+					color: #fff
+					font-size: 14px
+					background: #437857
+					&:first-child
+						+border-radius(5px 0 0 0)
+					&:last-child
+						+border-radius(0 5px 0 0)
+			tbody
+				tr
+					color: #4f575c
+					&:nth-child(even)
+						background: #f3f7f4
+						color: #437857
+			td
+				padding: 10px 10px
+				font-size: 12px
+				&:first-child
+					padding: 10px 19px
 
 
 
