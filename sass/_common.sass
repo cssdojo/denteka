@@ -1220,9 +1220,69 @@ a
 .fancybox-prev span
 	+s(f_prev)
 
+.overlay
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: rgba(#000, .6)
+	+gpu
+	// z-index: -1
+	z-index: 1055
+	opacity: 0
+	visibility: hidden
+	+transition(all .2s ease-in)
+	&.is-active
+		opacity: 1
+		visibility: visible
 
+.popup
+	position: fixed
+	width: 700px
+	height: 360px
+	left: 50%
+	top: 100px
+	margin-left: -350px
+	// margin-top: -230px
+	// z-index: -1
+	opacity: 0
+	background-color: #f0f0f4
+	+transform(translate3d(0,-100%,0))
+	+transition(all .2s ease-in)
+	+border-radius(5px)
+	z-index: 1060
+	visibility: hidden
+	&.is-active
+		visibility: visible
+		opacity: 1
+		+transform(translate3d(0,0,0))
+	.popup__in
+		padding: 70px 120px 10px
+	.popup__title
+		+lblack
+		color: #42845a
+		text-align: center
+		text-transform: uppercase
+		text-align: center
+		// color: #5e6b77
+		font-size: 36px
+		// +text-shadow(0 2px 0 rgba(26,68,95,.25))
+		line-height: 1
+		margin-bottom: 20px
+	p
+		text-align: center
+		margin-bottom: 25px
 
-
-
+	.form__row
+		margin-bottom: 15px
+	.form__submit
+		.btn
+			display: block
+			width: 100%
+			font-size: 18px
+			color: #fff
+			padding: 21px 0
+			margin-bottom: 20px
 
 

@@ -1,5 +1,16 @@
 head.ready(function() {
 
+	$(' .js-btn-call ').on('click', function() {
+		$(' .popup[data-popup="call"] ').addClass(' is-active ');
+		$(' .overlay ').addClass(' is-active ');
+		return false;
+	});
+
+	$(' .overlay ').on('click', function() {
+		$(' .popup ').removeClass(' is-active ');
+		$(' .overlay ').removeClass(' is-active ');
+		return false;
+	});
 
 	$('.fancybox').fancybox({
 		prevEffect		: 'none',

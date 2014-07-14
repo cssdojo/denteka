@@ -17,7 +17,7 @@
 			<div class="contacts">
 				<ul>
 					<li><a href="#"><i class="icon icon_phone"></i>8 (495) 452–08–04</a></li>
-					<li><a href="#" class="contacts__callback">Обратный звонок!</a></li>
+					<li><a href="#" class="contacts__callback js-btn-call">Обратный звонок!</a></li>
 					<li><a href="#" class="contacts__mail"><i class="icon icon_mail"></i>denteka@yandex.ru</a></li>
 				</ul>
 				<ul>
@@ -407,6 +407,24 @@
 	</div>
 </div>
 <!-- END footer -->
+
+<div class="overlay"></div>
+<div class="popup"  data-popup="call">
+	<div class="popup__in">
+		<div class="popup__title">Обратный звонок</div>
+		<p>Наш менеджер свяжется с вами в ближайшее время</p>
+		<div class="form">
+			<form action="#">
+				<div class="form__row">
+					<input type="text" class="input" placeholder="Телефон">
+				</div>
+				<div class="form__submit">
+					<button type="submit" class="btn btn-primary">Заказать</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

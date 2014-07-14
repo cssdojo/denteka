@@ -433,3 +433,14 @@ a:hover { color: #f6a007; text-decoration: none; }
 .fancybox-next span { background: url('../img/icons-s6d8d0e7908.png') 0 -431px no-repeat; width: 12px; height: 17px; }
 
 .fancybox-prev span { background: url('../img/icons-s6d8d0e7908.png') 0 -458px no-repeat; width: 12px; height: 17px; }
+
+.overlay { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.6); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); z-index: 1055; opacity: 0; visibility: hidden; -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; transition: all 0.2s ease-in; }
+.overlay.is-active { opacity: 1; visibility: visible; }
+
+.popup { position: fixed; width: 700px; height: 360px; left: 50%; top: 100px; margin-left: -350px; opacity: 0; background-color: #f0f0f4; -webkit-transform: translate3d(0, -100%, 0); -moz-transform: translate3d(0, -100%, 0); -ms-transform: translate3d(0, -100%, 0); -o-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; transition: all 0.2s ease-in; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; z-index: 1060; visibility: hidden; }
+.popup.is-active { visibility: visible; opacity: 1; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.popup .popup__in { padding: 70px 120px 10px; }
+.popup .popup__title { font-family: "lato-black"; font-weight: normal; font-style: normal; color: #42845a; text-align: center; text-transform: uppercase; text-align: center; font-size: 36px; line-height: 1; margin-bottom: 20px; }
+.popup p { text-align: center; margin-bottom: 25px; }
+.popup .form__row { margin-bottom: 15px; }
+.popup .form__submit .btn { display: block; width: 100%; font-size: 18px; color: white; padding: 21px 0; margin-bottom: 20px; }
