@@ -1,5 +1,23 @@
 head.ready(function() {
 
+	$('.rating').raty({
+		path      : 'img',
+		// cancelOff : 'cancel-off-big.png',
+		// cancelOn  : 'cancel-on-big.png',
+		size      : 18,
+		starHalf  : 'star-on.png',
+		starOff   : 'star-off.png',
+		starOn    : 'star-on.png',
+		// target    : '#precision-hint',
+		cancel    : false,
+		targetKeep: true,
+
+		precision : true,
+		score: function() {
+			return $(this).attr('data-score');
+		}
+	});
+
 	$(' .subnav .has-dropdown > a ').on('click', function() {
 		$('.search__form').slideUp('fast');
 		$(this).parent().toggleClass('is-active');
