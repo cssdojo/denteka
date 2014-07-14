@@ -711,6 +711,100 @@ a
 			&:before
 				content: none
 
+.h1
+	+lblack
+	color: #42845a
+	text-transform: uppercase
+	margin-bottom: 20px
+	letter-spacing: 0.04em
+	font-size: 30px
+	line-height: 35px
+
+.filters-row
+	background: #f0f0f5
+	+border-radius(5px)
+	padding: 20px
+	margin-bottom: 20px
+
+.filters
+	margin-top: 25px
+	&:first-child
+		margin-top: 0
+	&.filters_mod
+		.filters__list
+			li
+				&.is-current
+					a
+						background: #437857
+			a
+				color: #437857
+	.filters__title
+		+lblackitalic
+		font-size: 18px
+		color: #0071bc
+	.filters__list
+		margin-left: -4px
+		li
+			display: inline-block
+			&.is-current
+				a
+					color: #fff
+					background: #91278f
+					text-decoration: none
+		a
+			display: block
+			line-height: 1
+			padding: 4px
+			font-size: 12px
+			color: #91278f
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+				color: #4f575c
+
+.paginator
+	margin-bottom: 20px
+	.paginator__prev,
+	.paginator__next
+		+hidetext
+		display: block
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		top: 1px
+	.paginator__prev
+		+s(prev)
+		&:hover
+			+s(prev_a)
+	.paginator__next
+		+s(next)
+		&:hover
+			+s(next_a)
+	.paginator__pages
+		display: inline-block
+		vertical-align: middle
+		margin: 0 15px
+		font-size: 0
+		li
+			display: inline-block
+			// line-height: 1
+			margin-left: 7px
+			&:first-child
+				margin-left: 0
+			&.is-current
+				a
+					background: #0071bc
+					color: #fff
+					border-color: #0071bc
+		a
+			// line-height: 1
+			display: block
+			padding: 1px 5px
+			font-size: 12px
+			color: #0071bc
+			text-decoration: none
+			border: 1px solid #f0f0f5
+
 .topic
 	font-size: 14px
 	line-height: 22px
@@ -837,6 +931,119 @@ a
 					padding: 10px 19px
 
 
+.catrow
+	.catrow__item
+		position: relative
+		border: 2px solid #f0f0f5
+		// overflow: hidden
+		margin-bottom: 20px
+		&.is-new
+			.catrow__badge
+				+s(badge_new)
+			.catrow__price-current
+				color: #ed1c24
+		&.is-sale
+			.catrow__badge
+				+s(badge_sale)
+			.catrow__price-current
+				color: #ec008c
+		&.is-best
+			.catrow__badge
+				+s(badge_best)
+			.catrow__price-current
+				color: #0072bc
+	.catrow__badge
+		position: absolute
+		top: -2px
+		right: -2px
+		z-index: 1
+	.catrow__media
+		position: relative
+		float: left
+		width: 198px
+		height: 216px
+		overflow: hidden
+		border-right: 1px solid #f0f0f5
+		&:hover
+			.catrow__more
+				+opacity(1)
+	.catrow__more
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		text-align: center
+		line-height: 216px
 
+		background: rgba(#2c553c, .8)
+		font-size: 18px
+		color: #fff
+		text-decoration: none
+		text-transform: lowercase
+		+opacity(0)
+		+transition(all .2s linear)
+	.catrow__pic
+		text-align: center
+		line-height: 216px
+		img
+			min-width: 198px
+			max-height: 216px
+			display: inline-block
+			vertical-align: middle
+			line-height: 1
+	.catrow__info
+		overflow: hidden
+		padding: 18px
+		height: 216px
+		position: relative
+	.catrow__title
+		+lbold
+		color: #0071bc
+		font-size: 18px
+		// line-height: 16px
+		line-height: 1.3
+		a
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.catrow__descr
+		color: #4f575c
+		font-size: 14px
+		line-height: 24px
+	.catrow__meta
+		position: absolute
+		bottom: 20px
+		left: 18px
+		right: 15px
+		+clr
+	.catrow__price
+		float: left
+	.catrow__price-current
+		display: inline-block
+		vertical-align: middle
+		color: #4f575c
+		+lblack
+		font-size: 24px
+	.catrow__price-old
+		position: relative
+		top: 1px
+		display: inline-block
+		vertical-align: middle
+		text-decoration: line-through
+		+lmedium
+		font-size: 14px
+		margin-left: 4px
+	.catrow__action
+		position: relative
+		top: 2px
+		float: right
+		font-size: 14px
+		// margin-right: 37px
+	.catrow__action-sep
+		padding: 0 8px
+	.catrow__btn
+		width: 141px
+	.catrow__click
 
 
