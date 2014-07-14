@@ -1064,6 +1064,8 @@ a
 	.product__info
 		+clr
 		margin-bottom: 20px
+	.product__gal
+		margin-bottom: 15px
 	.product__meta
 		float: left
 		width: 340px
@@ -1170,9 +1172,53 @@ a
 	color: #acacac
 .comment__text
 
+.flexslider__viewport
+	border: 1px solid #dadada
+	margin-bottom: 13px
+	width: 338px
+	height: 338px
 
+.flexslider__slides
+	li
+		height: 336px
+		a
+			position: relative
+			display: block
+			height: 100%
+			&:before
+				position: absolute
+				bottom: 10px
+				right: 10px
+				+s(zoom)
+				content: ""
+	img
+		display: block
+// .flexslider__active-slide
+.flexslider__control-thumbs
+	li
+		display: inline-block
+		margin-left: 14px
+		width: 74px
+		height: 74px
+		overflow: hidden
+		&:first-child
+			margin-left: 0
+		img
+			display: block
+			width: 100%
+			height: auto
+			border: 2px solid #dadada
+			cursor: pointer
+			&.flexslider__active
+				border-color: #42845a
+				+border-radius(2px)
 
-
+.fancybox-close
+	+s(close)
+.fancybox-next span
+	+s(f_next)
+.fancybox-prev span
+	+s(f_prev)
 
 
 

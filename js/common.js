@@ -1,5 +1,22 @@
 head.ready(function() {
 
+
+	$('.fancybox').fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none'
+	});
+
+	$('.flexslider').flexslider({
+		animation: "slide",
+		slideshow: false,
+		controlNav: "thumbnails",
+		manualControls: "flexslider__control-thumbs",
+		directionNav: false,
+		namespace: "flexslider__",
+		selector: ".flexslider__slides > li",
+	});
+
+
 	$('.rating').raty({
 		path      : 'img',
 		// cancelOff : 'cancel-off-big.png',
