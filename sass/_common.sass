@@ -1065,15 +1065,19 @@ a
 		+clr
 		margin-bottom: 20px
 	.product__gal
-		margin-bottom: 15px
+		margin-bottom: 20px
 	.product__meta
 		float: left
 		width: 340px
 		margin-right: 20px
 		min-height: 1px
+		blockquote
+			+border-radius(5px)
+			background-color: #f0f0f5
+			padding: 20px
 	.product__price
 		+lblack
-		margin-bottom: 25px
+		margin-bottom: 5px
 	.product__price-old
 		font-size: 24px
 		text-decoration: line-through
@@ -1081,6 +1085,8 @@ a
 		font-size: 44px
 		color: #117ac0
 	.product__action
+		text-align: center
+		margin-bottom: 40px
 		.btn-primary
 			display: block
 			width: 100%
@@ -1100,7 +1106,8 @@ a
 	.product__descr
 		overflow: hidden
 		p
-			margin-bottom: 25px
+			// margin-bottom: 25px
+			margin-top: 25px
 			line-height: 22px
 			// a
 				// +litalic
@@ -1108,10 +1115,8 @@ a
 			margin-top: 25px
 			+lblack
 			font-size: 14px
-		blockquote
-			+border-radius(5px)
-			background-color: #f0f0f5
-			padding: 20px
+			+ p
+				margin-top: 0
 
 .comments
 	margin-bottom: 30px

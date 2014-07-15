@@ -380,18 +380,20 @@ a:hover { color: #f6a007; text-decoration: none; }
 .product .h1 { text-transform: none; font-size: 32px; line-height: 1; margin-bottom: 15px; }
 .product .product__info { *zoom: 1; margin-bottom: 20px; }
 .product .product__info:after { content: " "; display: table; clear: both; }
-.product .product__gal { margin-bottom: 15px; }
+.product .product__gal { margin-bottom: 20px; }
 .product .product__meta { float: left; width: 340px; margin-right: 20px; min-height: 1px; }
-.product .product__price { font-family: "lato-black"; font-weight: normal; font-style: normal; margin-bottom: 25px; }
+.product .product__meta blockquote { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: #f0f0f5; padding: 20px; }
+.product .product__price { font-family: "lato-black"; font-weight: normal; font-style: normal; margin-bottom: 5px; }
 .product .product__price-old { font-size: 24px; text-decoration: line-through; }
 .product .product__price-current { font-size: 44px; color: #117ac0; }
+.product .product__action { text-align: center; margin-bottom: 40px; }
 .product .product__action .btn-primary { display: block; width: 100%; font-size: 18px; color: white; padding: 21px 0; margin-bottom: 20px; }
 .product .product__action-sep { font-family: "lato-bold"; font-weight: normal; font-style: normal; display: inline-block; vertical-align: middle; }
 .product .product__btn-click { width: 181px; margin-left: 10px; }
 .product .product__descr { overflow: hidden; }
-.product .product__descr p { margin-bottom: 25px; line-height: 22px; }
+.product .product__descr p { margin-top: 25px; line-height: 22px; }
 .product .product__descr h3 { margin-top: 25px; font-family: "lato-black"; font-weight: normal; font-style: normal; font-size: 14px; }
-.product .product__descr blockquote { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: #f0f0f5; padding: 20px; }
+.product .product__descr h3 + p { margin-top: 0; }
 
 .comments { margin-bottom: 30px; }
 .comments .comments__title { font-size: 24px; font-family: "lato-bold"; font-weight: normal; font-style: normal; color: #117ac0; }
