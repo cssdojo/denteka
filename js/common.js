@@ -47,8 +47,14 @@ head.ready(function() {
 	});
 
 	$(' .subnav .has-dropdown > a ').on('click', function() {
-		$('.search__form').slideUp('fast');
-		$(this).parent().toggleClass('is-active');
+		if($(this).parent().hasClass('is-active')){
+			$('.subnav .has-dropdown').removeClass('is-active');
+		}
+		else{
+			$('.search__form').slideUp('fast');
+			$('.subnav .has-dropdown').removeClass('is-active');
+			$(this).parent().addClass('is-active');
+		}
 		return false;
 	});
 
