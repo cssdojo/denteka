@@ -331,7 +331,7 @@ a
 		position: absolute
 		left: -100%
 		top: 0
-		bottom: 0
+		bottom: 1px
 		width: 240px
 		background: #fff
 		z-index: 100
@@ -339,6 +339,14 @@ a
 		padding: 20px 24px 20px 17px
 		+transition(all .1s linear)
 		visibility: hidden
+	.subnav__dropdown-wrap
+		&.is-fixed
+			position: fixed
+			top: 20px
+		&.is-bolno
+			position: absolute !important
+			bottom: 20px
+			top: auto !important
 		li
 			margin-bottom: 25px
 			a
@@ -348,6 +356,9 @@ a
 				text-transform: none
 				&:hover
 					color: #ffa200 !important
+	.subnav__border
+		height: 1px
+		background: transparent
 	.subnav__sale
 		background: #d84002
 		margin-top: 30px
